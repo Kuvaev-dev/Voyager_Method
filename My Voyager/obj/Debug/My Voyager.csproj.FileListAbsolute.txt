@@ -1,0 +1,10 @@
+D:\Программирование\Мои проекты на C#\My Voyager\bin\Debug\My Voyager.exe.config
+D:\Программирование\Мои проекты на C#\My Voyager\bin\Debug\My Voyager.exe
+D:\Программирование\Мои проекты на C#\My Voyager\bin\Debug\My Voyager.pdb
+D:\Программирование\Мои проекты на C#\My Voyager\obj\Debug\My Voyager.csprojAssemblyReference.cache
+D:\Программирование\Мои проекты на C#\My Voyager\obj\Debug\My_Voyager.Form1.resources
+D:\Программирование\Мои проекты на C#\My Voyager\obj\Debug\My_Voyager.Properties.Resources.resources
+D:\Программирование\Мои проекты на C#\My Voyager\obj\Debug\My Voyager.csproj.GenerateResource.cache
+D:\Программирование\Мои проекты на C#\My Voyager\obj\Debug\My Voyager.csproj.CoreCompileInputs.cache
+D:\Программирование\Мои проекты на C#\My Voyager\obj\Debug\My Voyager.exe
+D:\Программирование\Мои проекты на C#\My Voyager\obj\Debug\My Voyager.pdb
