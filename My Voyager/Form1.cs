@@ -45,6 +45,8 @@ namespace My_Voyager
                 myMatrix.Rows[i].Cells[i].Value = "Г";
                 myMatrix.Rows[i].Cells[i].ReadOnly = true;
             }
+            // заполнение по индексу. Поместить значение в переменную и взаимодействовать!!!
+            // myMatrix.Rows[1].Cells[1].Value = 123;
         }
 
         private void step_Click(object sender, EventArgs e)
