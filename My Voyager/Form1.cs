@@ -22,7 +22,7 @@ namespace My_Voyager
         
         public void pushCount_Click(object sender, EventArgs e)
         {
-            // инициализация и заполнение матрицы
+            // 1. Инициализация и заполнение матрицы
             myMatrix.Enabled = true;
             
             info.Text = "Step 1. Заполнение матрицы городами.\nПоле с матрицей заполняется городами по главной диагонали. Количество городов введено пользователем. Заполните значения матрицы вручную. Максимальное количество городов - 10.";
@@ -56,13 +56,12 @@ namespace My_Voyager
                     
                 }
             }
-          
-            // заполнение по индексу. Поместить значение в переменную и взаимодействовать!!!
-            // myMatrix.Rows[1].Cells[1].Value = 123;
         }
 
         private void step_Click(object sender, EventArgs e)
         {
+            // 1. Внесение коллекции
+
             List<TextBox> lst = new List<TextBox>()
             {
                 new TextBox() {Location = new Point(502, 119), Size = new Size(28, 20)},
@@ -92,8 +91,8 @@ namespace My_Voyager
                 Controls.Add(item);
             }
 
-            info.Text = "Step 2. Поиск минимального элемента в каждой строке и столбце матрицы." + "Каждый элемент будет выведен в отдельное поле.";
-            int[,] a = new int[c, c];
+            // 2. Поиск минимального элемента в каждой строке матрицы.
+            info.Text = "Step 2. Поиск минимального элемента в каждой строке матрицы." + "Каждый элемент будет выведен в отдельное поле.";
             
             for (int i = 0; i < c; i++)
             {
@@ -126,42 +125,10 @@ namespace My_Voyager
                     lst[8].Text = min.ToString();
                 if (i == 9)
                     lst[9].Text = min.ToString();
-            }
-            for (int j = 0; j < c; j++)
-            {
-                int min = int.MaxValue;
-                for (int i = 0; i < c; i++)
-                {
-                    if (min > a[i, j])
-                    {
-                        min = a[i, j];
-                    }
-
-                }
-
-                if (j == 0)
+                if (i == 10)
                     lst[10].Text = min.ToString();
-                if (j == 1)
-                    lst[11].Text = min.ToString();
-                if (j == 2)
-                    lst[12].Text = min.ToString();
-                if (j == 3)
-                    lst[13].Text = min.ToString();
-                if (j == 4)
-                    lst[14].Text = min.ToString();
-                if (j == 5)
-                    lst[15].Text = min.ToString();
-                if (j == 6)
-                    lst[16].Text = min.ToString();
-                if (j == 7)
-                    lst[17].Text = min.ToString();
-                if (j == 8)
-                    lst[18].Text = min.ToString();
-                if (j == 9)
-                    lst[19].Text = min.ToString();
-                if (j == 10)
-                    lst[20].Text = min.ToString();
             }
+           
         }
         
     }
