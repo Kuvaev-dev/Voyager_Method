@@ -47,7 +47,6 @@ namespace My_Voyager
 
             for (int i = 0; i < c; i++)
             {
-                myMatrix.Rows.Add();
                 for (int j = 0; j < c; j++)
                 {
                     myMatrix.Rows[i].Cells[i].Style.BackColor = Color.DarkGreen;
@@ -57,6 +56,8 @@ namespace My_Voyager
 
                 }
             }
+
+            
         }
 
         private void step_Click(object sender, EventArgs e)
@@ -65,26 +66,26 @@ namespace My_Voyager
 
             List<Label> lst = new List<Label>()
             {
-                new Label() {Location = new Point(502, 119), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 145), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 171), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 197), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 223), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 249), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 275), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 301), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 327), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(502, 353), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(73, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(107, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(141, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(175, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(209, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(243, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(278, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(312, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(346, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
-                new Label() {Location = new Point(380, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black},
+                new Label() {Location = new Point(502, 119), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 0},
+                new Label() {Location = new Point(502, 145), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 1},
+                new Label() {Location = new Point(502, 171), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 2},
+                new Label() {Location = new Point(502, 197), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 3},
+                new Label() {Location = new Point(502, 223), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 4},
+                new Label() {Location = new Point(502, 249), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 5},
+                new Label() {Location = new Point(502, 275), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 6},
+                new Label() {Location = new Point(502, 301), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 7},
+                new Label() {Location = new Point(502, 327), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 8},
+                new Label() {Location = new Point(502, 353), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 9},
+                new Label() {Location = new Point(73, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 10},
+                new Label() {Location = new Point(107, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 11},
+                new Label() {Location = new Point(141, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 12},
+                new Label() {Location = new Point(175, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 13},
+                new Label() {Location = new Point(209, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 14},
+                new Label() {Location = new Point(243, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 15},
+                new Label() {Location = new Point(278, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 16},
+                new Label() {Location = new Point(312, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 17},
+                new Label() {Location = new Point(346, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 18},
+                new Label() {Location = new Point(380, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 19},
             };
 
             foreach (var item in lst)
@@ -98,8 +99,6 @@ namespace My_Voyager
             for (int i = 0; i < c; i++)
             {
                 int min = 0;
-                
-
                 for (int j = 0; j < c; j++)
                 {
 
@@ -110,7 +109,6 @@ namespace My_Voyager
 
                         if ((int)myMatrix.Rows[i].Cells[j].Value < min)
                             min = (int)myMatrix.Rows[i].Cells[j].Value;
-
 
                         if (i == 0)
                             lst[0].Text = min.ToString();
@@ -134,40 +132,46 @@ namespace My_Voyager
                             lst[9].Text = min.ToString();
 
                     }
-                    if((int)myMatrix.Rows[j].Cells[i].Value != 0)
-                    {
-                        int min2 = 0;
-                        if (i == 0)
-                            min2 = int.Parse(myMatrix.Rows[i].Cells[j].Value.ToString());
-                    
-                        if (min2 > int.Parse(myMatrix.Rows[i].Cells[j].Value.ToString()))
-                            min2 = int.Parse(myMatrix.Rows[i].Cells[j].Value.ToString());
-                        
-                        if (j == 0)
-                            lst[10].Text = min2.ToString();
-                        if (j == 1)
-                            lst[11].Text = min2.ToString();
-                        if (j == 2)
-                            lst[12].Text = min2.ToString();
-                        if (j == 3)
-                            lst[13].Text = min2.ToString();
-                        if (j == 4)
-                            lst[14].Text = min2.ToString();
-                        if (j == 5)
-                            lst[15].Text = min2.ToString();
-                        if (j == 6)
-                            lst[16].Text = min2.ToString();
-                        if (j == 7)
-                            lst[17].Text = min2.ToString();
-                        if (j == 8)
-                            lst[18].Text = min2.ToString();
-                        if (j == 9)
-                            lst[19].Text = min2.ToString();
-                    }
                     
                 }
             }
-            
+
+            // поиск минимального элемента в каждом столбце матрицы
+            for (int j = 0; j < c; j++)
+            {
+                int min2 = (int)myMatrix.Rows[0].Cells[j].Value;
+                for (int i = 0; i < c; i++)
+                {
+                    if ((int)myMatrix.Rows[i].Cells[j].Value != 0)
+                    {
+                        if ((int)myMatrix.Rows[i].Cells[j].Value < min2)
+                        {
+                            min2 = (int)myMatrix.Rows[i].Cells[j].Value;
+                            
+                        }
+                    }
+                }
+                if (j == 0)
+                    lst[10].Text = min2.ToString();
+                if (j == 1)
+                    lst[11].Text = min2.ToString();
+                if (j == 2)
+                    lst[12].Text = min2.ToString();
+                if (j == 3)
+                    lst[13].Text = min2.ToString();
+                if (j == 4)
+                    lst[14].Text = min2.ToString();
+                if (j == 5)
+                    lst[15].Text = min2.ToString();
+                if (j == 6)
+                    lst[16].Text = min2.ToString();
+                if (j == 7)
+                    lst[17].Text = min2.ToString();
+                if (j == 8)
+                    lst[18].Text = min2.ToString();
+                if (j == 9)
+                    lst[19].Text = min2.ToString();
+            }
         }
     }
 }
