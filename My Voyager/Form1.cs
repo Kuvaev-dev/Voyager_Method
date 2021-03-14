@@ -60,34 +60,32 @@ namespace My_Voyager
             
         }
 
-        private void step_Click(object sender, EventArgs e)
+        List<Label> lst = new List<Label>()
         {
-            // 1. Внесение коллекции
+            new Label() {Location = new Point(502, 119), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 0},
+            new Label() {Location = new Point(502, 145), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 1},
+            new Label() {Location = new Point(502, 171), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 2},
+            new Label() {Location = new Point(502, 197), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 3},
+            new Label() {Location = new Point(502, 223), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 4},
+            new Label() {Location = new Point(502, 249), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 5},
+            new Label() {Location = new Point(502, 275), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 6},
+            new Label() {Location = new Point(502, 301), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 7},
+            new Label() {Location = new Point(502, 327), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 8},
+            new Label() {Location = new Point(502, 353), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 9},
+            new Label() {Location = new Point(73, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 10},
+            new Label() {Location = new Point(107, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 11},
+            new Label() {Location = new Point(141, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 12},
+            new Label() {Location = new Point(175, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 13},
+            new Label() {Location = new Point(209, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 14},
+            new Label() {Location = new Point(243, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 15},
+            new Label() {Location = new Point(278, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 16},
+            new Label() {Location = new Point(312, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 17},
+            new Label() {Location = new Point(346, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 18},
+            new Label() {Location = new Point(380, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 19},
+        };
 
-            List<Label> lst = new List<Label>()
-            {
-                new Label() {Location = new Point(502, 119), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 0},
-                new Label() {Location = new Point(502, 145), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 1},
-                new Label() {Location = new Point(502, 171), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 2},
-                new Label() {Location = new Point(502, 197), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 3},
-                new Label() {Location = new Point(502, 223), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 4},
-                new Label() {Location = new Point(502, 249), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 5},
-                new Label() {Location = new Point(502, 275), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 6},
-                new Label() {Location = new Point(502, 301), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 7},
-                new Label() {Location = new Point(502, 327), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 8},
-                new Label() {Location = new Point(502, 353), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 9},
-                new Label() {Location = new Point(73, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 10},
-                new Label() {Location = new Point(107, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 11},
-                new Label() {Location = new Point(141, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 12},
-                new Label() {Location = new Point(175, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 13},
-                new Label() {Location = new Point(209, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 14},
-                new Label() {Location = new Point(243, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 15},
-                new Label() {Location = new Point(278, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 16},
-                new Label() {Location = new Point(312, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 17},
-                new Label() {Location = new Point(346, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 18},
-                new Label() {Location = new Point(380, 407), Size = new Size(28, 20), BackColor = Color.White, ForeColor = Color.Black, TabIndex = 19},
-            };
-
+        public void step_Click(object sender, EventArgs e)
+        {
             foreach (var item in lst)
             {
                 Controls.Add(item);
@@ -172,6 +170,20 @@ namespace My_Voyager
                 if (j == 9)
                     lst[19].Text = min2.ToString();
             }
+            
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            foreach(var item in lst)
+            {
+                item.Text = String.Empty;
+            }
+            myMatrix.Rows.Clear();
+            myMatrix.Columns.Clear();
+            counter.Text = String.Empty;
+            path.Text = String.Empty;
+            info.Text = String.Empty;
         }
     }
 }
