@@ -15,13 +15,14 @@ namespace My_Voyager
 
         public void Form1_Load(object sender, EventArgs e)
         {
-
-
+            step2.Visible = false;
+            step3.Visible = false;
         }
         public int c;
         
         public void pushCount_Click(object sender, EventArgs e)
         {
+            
             // 1. Инициализация и заполнение матрицы
             myMatrix.Enabled = true;
 
@@ -57,7 +58,7 @@ namespace My_Voyager
                 }
             }
 
-            
+            step2.Visible = true;
         }
 
         List<Label> lst = new List<Label>()
@@ -89,6 +90,7 @@ namespace My_Voyager
             foreach (var item in lst)
             {
                 Controls.Add(item);
+                item.Visible = true;
             }
 
             // 2. Поиск минимального элемента в каждой строке матрицы.
@@ -96,7 +98,7 @@ namespace My_Voyager
             
             for (int i = 0; i < c; i++)
             {
-                int min = 0;
+                int min = int.MaxValue;
                 for (int j = 0; j < c; j++)
                 {
 
@@ -107,45 +109,42 @@ namespace My_Voyager
 
                         if ((int)myMatrix.Rows[i].Cells[j].Value < min)
                             min = (int)myMatrix.Rows[i].Cells[j].Value;
-
-                        if (i == 0)
-                            lst[0].Text = min.ToString();
-                        if (i == 1)
-                            lst[1].Text = min.ToString();
-                        if (i == 2)
-                            lst[2].Text = min.ToString();
-                        if (i == 3)
-                            lst[3].Text = min.ToString();
-                        if (i == 4)
-                            lst[4].Text = min.ToString();
-                        if (i == 5)
-                            lst[5].Text = min.ToString();
-                        if (i == 6)
-                            lst[6].Text = min.ToString();
-                        if (i == 7)
-                            lst[7].Text = min.ToString();
-                        if (i == 8)
-                            lst[8].Text = min.ToString();
-                        if (i == 9)
-                            lst[9].Text = min.ToString();
-
                     }
-                    
+                    if (i == 0)
+                        lst[0].Text = min.ToString();
+                    if (i == 1)
+                        lst[1].Text = min.ToString();
+                    if (i == 2)
+                        lst[2].Text = min.ToString();
+                    if (i == 3)
+                        lst[3].Text = min.ToString();
+                    if (i == 4)
+                        lst[4].Text = min.ToString();
+                    if (i == 5)
+                        lst[5].Text = min.ToString();
+                    if (i == 6)
+                        lst[6].Text = min.ToString();
+                    if (i == 7)
+                        lst[7].Text = min.ToString();
+                    if (i == 8)
+                        lst[8].Text = min.ToString();
+                    if (i == 9)
+                        lst[9].Text = min.ToString();
                 }
             }
 
             // поиск минимального элемента в каждом столбце матрицы
             for (int j = 0; j < c; j++)
             {
-                int min2 = (int)myMatrix.Rows[0].Cells[j].Value;
+                
+                int min2 = int.MaxValue;
                 for (int i = 0; i < c; i++)
                 {
                     if ((int)myMatrix.Rows[i].Cells[j].Value != 0)
                     {
-                        if ((int)myMatrix.Rows[i].Cells[j].Value < min2)
+                        if (min2 > (int)myMatrix.Rows[i].Cells[j].Value)
                         {
                             min2 = (int)myMatrix.Rows[i].Cells[j].Value;
-                            
                         }
                     }
                 }
@@ -170,7 +169,12 @@ namespace My_Voyager
                 if (j == 9)
                     lst[19].Text = min2.ToString();
             }
-            
+            step3.Visible = true;
+        }
+
+        private void step3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -178,12 +182,18 @@ namespace My_Voyager
             foreach(var item in lst)
             {
                 item.Text = String.Empty;
+                item.Visible = false;
             }
+            
             myMatrix.Rows.Clear();
             myMatrix.Columns.Clear();
             counter.Text = String.Empty;
             path.Text = String.Empty;
             info.Text = String.Empty;
+            step2.Visible = false;
+            step3.Visible = false;
         }
+
+        
     }
 }
