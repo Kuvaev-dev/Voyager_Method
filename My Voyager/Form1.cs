@@ -170,6 +170,8 @@ namespace My_Voyager
                     lst[19].Text = min2.ToString();
             }
             step3.Visible = true;
+            di.Visible = true;
+            dj.Visible = true;
         }
 
         private void step3_Click(object sender, EventArgs e)
