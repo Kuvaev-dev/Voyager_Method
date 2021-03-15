@@ -39,14 +39,14 @@ namespace My_Voyager
             this.counter = new System.Windows.Forms.TextBox();
             this.info = new System.Windows.Forms.Label();
             this.progName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.methodName = new System.Windows.Forms.Label();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.pathLabel = new System.Windows.Forms.Label();
             this.path = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.pathName = new System.Windows.Forms.Label();
+            this.stepName = new System.Windows.Forms.Label();
+            this.di = new System.Windows.Forms.Label();
+            this.dj = new System.Windows.Forms.Label();
             this.Clear = new System.Windows.Forms.Button();
             this.step3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.myMatrix)).BeginInit();
@@ -110,38 +110,38 @@ namespace My_Voyager
             this.progName.TabIndex = 4;
             this.progName.Text = "МЕТОД ГІЛОК ТА МЕЖ";
             // 
-            // label1
+            // methodName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(385, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 18);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ЗАДАЧА КОМІВОЯЖЕРА";
+            this.methodName.AutoSize = true;
+            this.methodName.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.methodName.ForeColor = System.Drawing.Color.White;
+            this.methodName.Location = new System.Drawing.Point(385, 53);
+            this.methodName.Name = "methodName";
+            this.methodName.Size = new System.Drawing.Size(164, 18);
+            this.methodName.TabIndex = 5;
+            this.methodName.Text = "ЗАДАЧА КОМІВОЯЖЕРА";
             // 
-            // label3
+            // cityLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(275, 476);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Кількість міст у матриці:";
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cityLabel.ForeColor = System.Drawing.Color.White;
+            this.cityLabel.Location = new System.Drawing.Point(275, 476);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(168, 16);
+            this.cityLabel.TabIndex = 7;
+            this.cityLabel.Text = "Кількість міст у матриці:";
             // 
-            // label4
+            // pathLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(334, 502);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Кінцевий шлях:";
+            this.pathLabel.AutoSize = true;
+            this.pathLabel.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pathLabel.ForeColor = System.Drawing.Color.White;
+            this.pathLabel.Location = new System.Drawing.Point(334, 502);
+            this.pathLabel.Name = "pathLabel";
+            this.pathLabel.Size = new System.Drawing.Size(109, 16);
+            this.pathLabel.TabIndex = 8;
+            this.pathLabel.Text = "Кінцевий шлях:";
             // 
             // path
             // 
@@ -150,49 +150,49 @@ namespace My_Voyager
             this.path.Size = new System.Drawing.Size(169, 20);
             this.path.TabIndex = 9;
             // 
-            // label2
+            // pathName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(181, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "ПОБУДОВАНИЙ ШЛЯХ:";
+            this.pathName.AutoSize = true;
+            this.pathName.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pathName.ForeColor = System.Drawing.Color.White;
+            this.pathName.Location = new System.Drawing.Point(181, 90);
+            this.pathName.Name = "pathName";
+            this.pathName.Size = new System.Drawing.Size(161, 16);
+            this.pathName.TabIndex = 11;
+            this.pathName.Text = "ПОБУДОВАНИЙ ШЛЯХ:";
             // 
-            // label6
+            // stepName
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(608, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 16);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "ОПИС КРОКІВ РОЗВ\'ЯЗАННЯ:";
+            this.stepName.AutoSize = true;
+            this.stepName.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.stepName.ForeColor = System.Drawing.Color.White;
+            this.stepName.Location = new System.Drawing.Point(608, 90);
+            this.stepName.Name = "stepName";
+            this.stepName.Size = new System.Drawing.Size(204, 16);
+            this.stepName.TabIndex = 12;
+            this.stepName.Text = "ОПИС КРОКІВ РОЗВ\'ЯЗАННЯ:";
             // 
-            // label5
+            // di
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(499, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 13);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "di";
+            this.di.AutoSize = true;
+            this.di.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.di.ForeColor = System.Drawing.Color.White;
+            this.di.Location = new System.Drawing.Point(499, 103);
+            this.di.Name = "di";
+            this.di.Size = new System.Drawing.Size(17, 13);
+            this.di.TabIndex = 34;
+            this.di.Text = "di";
             // 
-            // label7
+            // dj
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(50, 414);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "dj";
+            this.dj.AutoSize = true;
+            this.dj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dj.ForeColor = System.Drawing.Color.White;
+            this.dj.Location = new System.Drawing.Point(50, 414);
+            this.dj.Name = "dj";
+            this.dj.Size = new System.Drawing.Size(17, 13);
+            this.dj.TabIndex = 35;
+            this.dj.Text = "dj";
             // 
             // Clear
             // 
@@ -221,14 +221,14 @@ namespace My_Voyager
             this.ClientSize = new System.Drawing.Size(867, 634);
             this.Controls.Add(this.step3);
             this.Controls.Add(this.Clear);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dj);
+            this.Controls.Add(this.di);
+            this.Controls.Add(this.stepName);
+            this.Controls.Add(this.pathName);
             this.Controls.Add(this.path);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pathLabel);
+            this.Controls.Add(this.cityLabel);
+            this.Controls.Add(this.methodName);
             this.Controls.Add(this.progName);
             this.Controls.Add(this.info);
             this.Controls.Add(this.counter);
@@ -257,14 +257,14 @@ namespace My_Voyager
         private TextBox counter;
         private Label info;
         private Label progName;
-        private Label label1;
-        private Label label3;
-        private Label label4;
+        private Label methodName;
+        private Label cityLabel;
+        private Label pathLabel;
         private TextBox path;
-        private Label label2;
-        private Label label6;
-        private Label label5;
-        private Label label7;
+        private Label pathName;
+        private Label stepName;
+        private Label di;
+        private Label dj;
         private Button Clear;
         private Button step3;
     }
