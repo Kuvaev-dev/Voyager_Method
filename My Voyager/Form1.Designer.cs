@@ -33,21 +33,22 @@ namespace My_Voyager
         /// </summary>
         private void InitializeComponent()
         {
-            
             this.myMatrix = new System.Windows.Forms.DataGridView();
             this.pushCount = new System.Windows.Forms.Button();
-            this.step = new System.Windows.Forms.Button();
+            this.step2 = new System.Windows.Forms.Button();
             this.counter = new System.Windows.Forms.TextBox();
             this.info = new System.Windows.Forms.Label();
             this.progName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.path = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.Clear = new System.Windows.Forms.Button();
+            this.step3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.myMatrix)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@ namespace My_Voyager
             // 
             // pushCount
             // 
-            this.pushCount.Location = new System.Drawing.Point(328, 545);
+            this.pushCount.Location = new System.Drawing.Point(337, 545);
             this.pushCount.Name = "pushCount";
             this.pushCount.Size = new System.Drawing.Size(115, 23);
             this.pushCount.TabIndex = 1;
@@ -71,15 +72,15 @@ namespace My_Voyager
             this.pushCount.UseVisualStyleBackColor = true;
             this.pushCount.Click += new System.EventHandler(this.pushCount_Click);
             // 
-            // step
+            // step2
             // 
-            this.step.Location = new System.Drawing.Point(473, 545);
-            this.step.Name = "step";
-            this.step.Size = new System.Drawing.Size(115, 23);
-            this.step.TabIndex = 2;
-            this.step.Text = "Make a step";
-            this.step.UseVisualStyleBackColor = true;
-            this.step.Click += new System.EventHandler(this.step_Click);
+            this.step2.Location = new System.Drawing.Point(337, 585);
+            this.step2.Name = "step2";
+            this.step2.Size = new System.Drawing.Size(115, 23);
+            this.step2.TabIndex = 2;
+            this.step2.Text = "Make a step 2";
+            this.step2.UseVisualStyleBackColor = true;
+            this.step2.Click += new System.EventHandler(this.step_Click);
             // 
             // counter
             // 
@@ -142,12 +143,12 @@ namespace My_Voyager
             this.label4.TabIndex = 8;
             this.label4.Text = "Кінцевий шлях:";
             // 
-            // textBox1
+            // path
             // 
-            this.textBox1.Location = new System.Drawing.Point(473, 502);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 20);
-            this.textBox1.TabIndex = 9;
+            this.path.Location = new System.Drawing.Point(473, 502);
+            this.path.Name = "path";
+            this.path.Size = new System.Drawing.Size(169, 20);
+            this.path.TabIndex = 9;
             // 
             // label2
             // 
@@ -193,22 +194,45 @@ namespace My_Voyager
             this.label7.TabIndex = 35;
             this.label7.Text = "dj";
             // 
+            // Clear
+            // 
+            this.Clear.Location = new System.Drawing.Point(473, 545);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(115, 23);
+            this.Clear.TabIndex = 36;
+            this.Clear.Text = "Clear All";
+            this.Clear.UseCompatibleTextRendering = true;
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
+            // step3
+            // 
+            this.step3.Location = new System.Drawing.Point(473, 585);
+            this.step3.Name = "step3";
+            this.step3.Size = new System.Drawing.Size(115, 23);
+            this.step3.TabIndex = 37;
+            this.step3.Text = "Make a step 3";
+            this.step3.UseVisualStyleBackColor = true;
+            this.step3.Click += new System.EventHandler(this.step3_Click);
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(44)))), ((int)(((byte)(148)))));
-            this.ClientSize = new System.Drawing.Size(867, 607);
+            this.ClientSize = new System.Drawing.Size(867, 634);
+            this.Controls.Add(this.step3);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.path);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progName);
             this.Controls.Add(this.info);
             this.Controls.Add(this.counter);
-            this.Controls.Add(this.step);
+            this.Controls.Add(this.step2);
             this.Controls.Add(this.pushCount);
             this.Controls.Add(this.myMatrix);
             this.MaximizeBox = false;
@@ -222,23 +246,27 @@ namespace My_Voyager
 
         }
 
+        
+
 
         #endregion
 
         private DataGridView myMatrix;
         private Button pushCount;
-        private Button step;
+        private Button step2;
         private TextBox counter;
         private Label info;
         private Label progName;
         private Label label1;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox path;
         private Label label2;
         private Label label6;
         private Label label5;
         private Label label7;
+        private Button Clear;
+        private Button step3;
     }
 }
 
