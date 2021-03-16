@@ -106,7 +106,7 @@ namespace My_Voyager
                 int min = int.MaxValue;
                 for (int j = 0; j < c; j++)
                 {
-                     if((int)myMatrix.Rows[i].Cells[j].Value > 0)
+                     if((int)myMatrix.Rows[i].Cells[j].Value > -1)
                      {
                         if (j == 0)
                             min = (int)myMatrix.Rows[i].Cells[j].Value;
