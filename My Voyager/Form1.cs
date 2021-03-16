@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace My_Voyager
 {
@@ -17,8 +18,11 @@ namespace My_Voyager
         {
             step2.Visible = false;
             step3.Visible = false;
+            step4.Visible = false;
+            di.Visible = false;
+            dj.Visible = false;
         }
-        public int c;
+        public int c, p = 0;
         
         public void pushCount_Click(object sender, EventArgs e)
         {
@@ -50,11 +54,12 @@ namespace My_Voyager
             {
                 for (int j = 0; j < c; j++)
                 {
+
                     myMatrix.Rows[i].Cells[i].Style.BackColor = Color.DarkGreen;
                     myMatrix.Rows[i].Cells[i].Style.ForeColor = Color.White;
                     myMatrix.Rows[i].Cells[i].Value = 0;
                     myMatrix.Rows[i].Cells[i].ReadOnly = true;
-
+                   
                 }
             }
 
@@ -101,73 +106,38 @@ namespace My_Voyager
                 int min = int.MaxValue;
                 for (int j = 0; j < c; j++)
                 {
-
-                    if ((int)myMatrix.Rows[i].Cells[j].Value != 0)
-                    {
+                     if((int)myMatrix.Rows[i].Cells[j].Value > -1)
+                     {
                         if (j == 0)
                             min = (int)myMatrix.Rows[i].Cells[j].Value;
 
                         if ((int)myMatrix.Rows[i].Cells[j].Value < min)
                             min = (int)myMatrix.Rows[i].Cells[j].Value;
-                    }
-                    if (i == 0)
-                        lst[0].Text = min.ToString();
-                    if (i == 1)
-                        lst[1].Text = min.ToString();
-                    if (i == 2)
-                        lst[2].Text = min.ToString();
-                    if (i == 3)
-                        lst[3].Text = min.ToString();
-                    if (i == 4)
-                        lst[4].Text = min.ToString();
-                    if (i == 5)
-                        lst[5].Text = min.ToString();
-                    if (i == 6)
-                        lst[6].Text = min.ToString();
-                    if (i == 7)
-                        lst[7].Text = min.ToString();
-                    if (i == 8)
-                        lst[8].Text = min.ToString();
-                    if (i == 9)
-                        lst[9].Text = min.ToString();
-                }
-            }
 
-            // поиск минимального элемента в каждом столбце матрицы
-            for (int j = 0; j < c; j++)
-            {
-                
-                int min2 = int.MaxValue;
-                for (int i = 0; i < c; i++)
-                {
-                    if ((int)myMatrix.Rows[i].Cells[j].Value != 0)
-                    {
-                        if (min2 > (int)myMatrix.Rows[i].Cells[j].Value)
-                        {
-                            min2 = (int)myMatrix.Rows[i].Cells[j].Value;
-                        }
+                        if (i == 0)
+                            lst[0].Text = min.ToString();
+                        if (i == 1)
+                            lst[1].Text = min.ToString();
+                        if (i == 2)
+                            lst[2].Text = min.ToString();
+                        if (i == 3)
+                            lst[3].Text = min.ToString();
+                        if (i == 4)
+                            lst[4].Text = min.ToString();
+                        if (i == 5)
+                            lst[5].Text = min.ToString();
+                        if (i == 6)
+                            lst[6].Text = min.ToString();
+                        if (i == 7)
+                            lst[7].Text = min.ToString();
+                        if (i == 8)
+                            lst[8].Text = min.ToString();
+                        if (i == 9)
+                            lst[9].Text = min.ToString();
                     }
+                   
+                        
                 }
-                if (j == 0)
-                    lst[10].Text = min2.ToString();
-                if (j == 1)
-                    lst[11].Text = min2.ToString();
-                if (j == 2)
-                    lst[12].Text = min2.ToString();
-                if (j == 3)
-                    lst[13].Text = min2.ToString();
-                if (j == 4)
-                    lst[14].Text = min2.ToString();
-                if (j == 5)
-                    lst[15].Text = min2.ToString();
-                if (j == 6)
-                    lst[16].Text = min2.ToString();
-                if (j == 7)
-                    lst[17].Text = min2.ToString();
-                if (j == 8)
-                    lst[18].Text = min2.ToString();
-                if (j == 9)
-                    lst[19].Text = min2.ToString();
             }
             step3.Visible = true;
             di.Visible = true;
@@ -176,9 +146,54 @@ namespace My_Voyager
 
         private void step3_Click(object sender, EventArgs e)
         {
+            info.Text = "Step 3. Делаем редукцию строк.";
+            for (int i = 0; i < c; i++)
+            {
+                for (int j = 0; j < c; j++)
+                {
+                    if ((int)myMatrix.Rows[j].Cells[i].Value > -1)
+                    {
+                        myMatrix.Rows[j].Cells[i].Value = Convert.ToString(Convert.ToInt32(myMatrix.Rows[j].Cells[i].Value) - Convert.ToInt32(lst[j].Text));
 
+                    }
+                }
+            }
+            step4.Visible = true;
         }
 
+        private void step4_Click(object sender, EventArgs e)
+        {
+            info.Text = "Step 4. Ищем минимальный элемент в каждом столбце матрицы.";
+            
+            for (int i = 0; i < c; i++)
+            {
+                
+                int MinID = myMatrix.Rows.Cast<DataGridViewRow>().Min(r => Convert.ToInt32(r.Cells[i].Value));
+               
+                if (i == 0)
+                    lst[10].Text = MinID.ToString();
+                if (i == 1)
+                    lst[11].Text = MinID.ToString();
+                if (i == 2)
+                    lst[12].Text = MinID.ToString();
+                if (i == 3)
+                    lst[13].Text = MinID.ToString();
+                if (i == 4)
+                    lst[14].Text = MinID.ToString();
+                if (i == 5)
+                    lst[15].Text = MinID.ToString();
+                if (i == 6)
+                    lst[16].Text = MinID.ToString();
+                if (i == 7)
+                    lst[17].Text = MinID.ToString();
+                if (i == 8)
+                    lst[18].Text = MinID.ToString();
+                if (i == 9)
+                    lst[19].Text = MinID.ToString();
+                
+            }
+        }
+        
         private void Clear_Click(object sender, EventArgs e)
         {
             foreach(var item in lst)
@@ -194,8 +209,7 @@ namespace My_Voyager
             info.Text = String.Empty;
             step2.Visible = false;
             step3.Visible = false;
+            step4.Visible = false;
         }
-
-        
     }
 }
